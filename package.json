@@ -19,6 +19,7 @@
     "prettier": "^3.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hot-toast": "^2.5.1",
     "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {
