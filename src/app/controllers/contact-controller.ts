@@ -1,8 +1,8 @@
-import { validate } from "class-validator"
+import { ContactFormDTO } from "@/app/dtos/ContactFormDTO"
+import { MailOptions } from "@/app/model/MailOptions"
+import { sendEmail } from "@/app/services/send-email-service"
 
-import { ContactFormDTO } from "../dtos/ContactFormDTO"
-import { MailOptions } from "../model/MailOptions"
-import { sendEmail } from "../services/send-email-service"
+import { validate } from "class-validator"
 
 export async function handleContactSubmission(body: ContactFormDTO) {
   const errors = await validate(body)

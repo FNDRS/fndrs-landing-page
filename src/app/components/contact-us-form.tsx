@@ -1,12 +1,12 @@
 "use client"
 
+import InputField from "@/app/components/input-field"
+import PhoneField from "@/app/components/phone-field"
+import TextAreaField from "@/app/components/text-area-field"
+
 import React from "react"
 import { useForm } from "react-hook-form"
 import { toast, Toaster } from "react-hot-toast"
-
-import InputField from "./input-field"
-import PhoneField from "./phone-field"
-import TextAreaField from "./text-area-field"
 
 interface ContactFormData {
   name: string

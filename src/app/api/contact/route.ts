@@ -1,4 +1,4 @@
-import { handleContactSubmission } from "../../controllers/contact-controller"
+import { handleContactSubmission } from "@/app/controllers/contact-controller"
 
 export async function POST(req: Request): Promise<Response> {
   try {
