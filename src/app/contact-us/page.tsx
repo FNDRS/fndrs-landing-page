@@ -1,6 +1,6 @@
 import Script from "next/script"
 
-import ContactUsForm from "../components/ContactUsForm"
+import ContactUsForm from "../components/contact-us-form"
 
 export default function ContactUsPage() {
   return (

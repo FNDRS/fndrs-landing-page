@@ -17,7 +17,7 @@ export async function handleContactSubmission(body: ContactFormDTO) {
   const mailOptions = new MailOptions(
     "FNDRS Info <info@thefndrs.com>",
     ["carlos.pineda@thefndrs.com", "marlon.castro@thefndrs.com", "jorge.torres@thefndrs.com"],
-    `Nuevo correo de usuario ${body.name} ${body.email} ${body.phoneNumber}. Asunto: ${body.subject}`,
+    `New email from user ${body.name} ${body.email} ${body.phoneNumber}. Asunto: ${body.subject}`,
     body.message,
     `<p>${body.message}</p>`
   )
