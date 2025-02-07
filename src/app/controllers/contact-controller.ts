@@ -25,7 +25,5 @@ export async function handleContactSubmission(body: ContactFormDTO) {
 
   await sendEmail(mailOptions)
 
-  console.log("Form submission processed:", body)
-
   return { status: 200, message: "Form submitted successfully!" }
 }
