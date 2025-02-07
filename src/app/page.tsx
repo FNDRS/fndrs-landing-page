@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 import { Header } from "./components/header"
+import ContactUs from "./components/main-sections/contact-us"
 import SharedIcon from "./components/shared"
 
 export default function Home() {
@@ -62,6 +63,7 @@ export default function Home() {
           </ul>
         </div>
       </section>
+      <ContactUs />
     </main>
   )
 }

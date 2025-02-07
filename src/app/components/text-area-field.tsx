@@ -22,11 +22,11 @@ export default function TextAreaField<T extends FieldValues>({
 }: TextAreaFieldProps<T>) {
   return (
     <div className="w-full flex flex-col">
-      <label className="block text-xl" htmlFor="message">
+      <label className="text-xl mb-2" htmlFor="message">
         {label}
       </label>
       <textarea
-        className={`w-full border rounded-md p-2 bg-transparent resize-none h-48 autofill:bg-transparent ${errors[id] ? "border-red-500" : "border-white"}`}
+        className={`w-full border rounded-md p-2 bg-transparent resize-none h-40 autofill:bg-transparent ${errors[id] ? "border-red-500" : "border-[#bcbcbca9]"} w-full focus-visible:border-white focus-visible:outline-none focus-visible:ring-white"}`}
         {...register(id, { required: required && `${labelError || "Field"} is required`, pattern })}
       />
       <p

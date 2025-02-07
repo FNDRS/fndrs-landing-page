@@ -20,14 +20,12 @@ export default function PhoneField<T extends FieldValues>({
 }: PhoneFieldProps<T>) {
   return (
     <div className="w-full flex flex-col">
-      <label className="block text-xl" htmlFor="phoneNumber">
-        {label}
-      </label>
+      <label className="text-xl mb-2">{label}</label>
       <div className="flex flex-row gap-6 items-center flex-nowrap">
         <div className="text-xl">HN +504</div>
         <input
           type="text"
-          className={`border rounded-md p-2 bg-transparent flex-1 min-w-0 autofill:bg-transparent ${errors[id] ? "border-red-500" : "border-white"}`}
+          className={`border rounded-md p-2 bg-transparent flex-1 min-w-0 autofill:bg-transparent ${errors[id] ? "border-red-500" : "border-[#bcbcbca9]"} w-full focus-visible:border-white focus-visible:outline-none focus-visible:ring-white"}`}
           {...register(id, { required: required && `${label} is required`, pattern })}
         />
       </div>

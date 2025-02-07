@@ -23,16 +23,15 @@ export default function InputField<T extends FieldValues>({
   inputClassName = "border rounded-md p-2 bg-transparent flex-1 min-w-0 autofill:bg-transparent"
 }: InputFieldProps<T>) {
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col my-1">
       {label && (
-        <label className="block text-xl mb-3" htmlFor={id.toString()}>
+        <label className="text-xl mb-2" htmlFor={id.toString()}>
           {label}
         </label>
       )}
-
       <input
         type={type}
-        className={`${inputClassName} ${errors[id] ? "border-red-500" : "border-white"}`}
+        className={`${inputClassName} ${errors[id] ? "border-red-500" : "border-[#bcbcbca9]"} w-full focus-visible:border-white focus-visible:outline-none focus-visible:ring-white`}
         {...register(id, { required: required && `${label} is required`, pattern })}
       />
       <p
