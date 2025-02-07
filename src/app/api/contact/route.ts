@@ -1,6 +1,9 @@
 import { handleContactSubmission } from "@/app/controllers/contact-controller"
 
-export async function POST(req: Request): Promise<Response> {
+import axios from "axios"
+import { NextRequest, NextResponse } from "next/server"
+
+export async function POST(req: NextRequest): Promise<Response> {
   try {
     const body = await req.json()
 
@@ -8,7 +11,15 @@ export async function POST(req: Request): Promise<Response> {
 
     return new Response(JSON.stringify(result), { status: result.status })
   } catch (error) {
-    console.error("Error handling form submission:", error)
-    return new Response(JSON.stringify({ error: "Something went wrong." }), { status: 500 })
+    console.error({ error })
+
+    const status = axios.isAxiosError(error) && error.response ? error.response.status : 500
+    return NextResponse.json(
+      {
+        message: "Error fetching balance info",
+        error: (error as Error).message
+      },
+      { status }
+    )
   }
 }
