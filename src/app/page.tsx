@@ -1,19 +1,20 @@
-import Image from "next/image"
-
 import { Header } from "./components/header"
 import ContactUs from "./components/main-sections/contact-us"
 import SharedIcon from "./components/shared"
+import { SplineViewer } from "./components/spline-viewer"
+import { abstractTwist, cardsAnimation, sunAndMountains } from "./utils/spline-scenes"
 
 export default function Home() {
   return (
     <main>
       <Header />
-      <section className="flex flex-row items-center justify-center h-screen">
-        <div className="flex flex-col text-center items-center">
+      <section className="relative flex flex-row items-center justify-center h-screen">
+        <SplineViewer scene={sunAndMountains} className="absolute top-0 left-0 w-full h-full z-0" />
+        <div className="relative flex flex-col text-center items-center gap-8 ">
           <h2 className="text-xl">Make things with</h2>
           <h1 className="uppercase text-7xl font-extrabold">excellence</h1>
           <button className="bg-white hover:bg-gray-200 text-black py-2 px-12 rounded-xl mt-4 w-fit">Let&apos;s Create</button>
-          <SharedIcon kind="arrowDown" className="mt-10 cursor-pointer" />
+          <SharedIcon kind="arrowDown" className="mt-[2rem] cursor-pointer" />
         </div>
       </section>
       <section className="h-screen">
@@ -28,8 +29,8 @@ export default function Home() {
             </p>
             <button className="bg-white hover:bg-gray-200 text-black py-2 px-12 rounded-xl mt-4 w-fit">Know Us</button>
           </div>
-          <div className="flex-1">
-            <Image src="/assets/cards.png" alt="Cards" width={500} height={500} />
+          <div className="flex-1 h-[400px]">
+            <SplineViewer scene={cardsAnimation} />
           </div>
         </div>
       </section>
@@ -42,8 +43,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="h-screen">
-        <div className="w-[1200px] mx-auto flex flex-row items-center justify-center">
+      <section className="h-screen relative">
+        <SplineViewer scene={abstractTwist} className="absolute top-0 left-0 w-full h-full -z-10" />
+        <div className="relative w-[1200px] mx-auto flex flex-row items-center justify-center">
           <h3 className="font-bold text-3xl w-[400px] text-center">Our goal is to take your business to the next level.</h3>
         </div>
         <div className="w-[1200px] mx-auto mt-32">
