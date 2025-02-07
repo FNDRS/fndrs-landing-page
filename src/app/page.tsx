@@ -2,14 +2,14 @@ import { Header } from "./components/header"
 import ContactUs from "./components/main-sections/contact-us"
 import SharedIcon from "./components/shared"
 import { SplineViewer } from "./components/spline-viewer"
-import { abstractTwist, cardsAnimation, sunAndMountains } from "./utils/spline-scenes"
+import { abstractTwist, cardsAnimation, whiteParticles } from "./utils/spline-scenes"
 
 export default function Home() {
   return (
     <main>
       <Header />
       <section className="relative flex flex-row items-center justify-center h-screen">
-        <SplineViewer scene={sunAndMountains} className="absolute top-0 left-0 w-full h-full z-0" />
+        <SplineViewer scene={whiteParticles} className="absolute top-0 left-0 w-fit h-fit -z-10" />
         <div className="relative flex flex-col text-center items-center gap-8 ">
           <h2 className="text-xl">Make things with</h2>
           <h1 className="uppercase text-7xl font-extrabold">excellence</h1>
