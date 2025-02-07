@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
+    "@splinetool/react-spline": "^4.0.0",
+    "axios": "^1.7.9",
     "class-validator": "^0.14.1",
     "husky": "^9.1.7",
     "next": "^15.1.6",
@@ -19,6 +21,8 @@
     "prettier": "^3.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.54.2",
+    "react-hot-toast": "^2.5.1",
     "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {

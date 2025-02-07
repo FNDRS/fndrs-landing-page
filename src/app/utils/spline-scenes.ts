@@ -1,0 +1,8 @@
+export const whiteParticles = "https://prod.spline.design/Ty7eDqDQd4774jXD/scene.splinecode"
+export const sunAndMountains = "https://prod.spline.design/lewYIb3uYgH-SpcE/scene.splinecode"
+export const redParticles = "https://prod.spline.design/rydpw0UO-tR11lMV/scene.splinecode"
+export const blueParticles = "https://prod.spline.design/4dDxD01GdCaZ0Nbz/scene.splinecode"
+export const purpleParticles = "https://prod.spline.design/9Q2Svy920i208lUS/scene.splinecode"
+export const orangeParticles = "https://prod.spline.design/PBf0u6zCCDzT0rax/scene.splinecode"
+export const abstractTwist = "https://prod.spline.design/QIWZREJyZINgRFva/scene.splinecode"
+export const cardsAnimation = "https://prod.spline.design/RVxppLzCdgCIh8KM/scene.splinecode"
