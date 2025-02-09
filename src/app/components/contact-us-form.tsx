@@ -64,8 +64,6 @@ export default function ContactUsForm() {
 
       <InputField label={"Phone"} type="text" id={"phoneNumber"} register={register} errors={errors} required />
 
-      <InputField label={"Subject"} type="text" id={"subject"} register={register} errors={errors} required />
-
       <TextAreaField label={"Tell us about your idea"} register={register} errors={errors} id={"message"} required />
 
       <button className="text-black font-bold bg-white w-fit text-xl px-20 py-2 border rounded-xl" disabled={isLoading}>
