@@ -7,23 +7,25 @@ export const Footer = () => {
   return (
     <section className="h-[50vh] flex flex-col justify-end">
       <footer>
-        <div className="border-y-[1px] border-[#bcbcbca9] p-8">
-          <Image src="/fndrs-logo.webp" alt="logo" width={100} height={100} />
-          <p className="text-[#bcbcbca9] mt-4">Make the things with excellence.</p>
-          <ul className="mt-8">
+        <div className="border-y-[1px] items-center w-full sm:border-none border-[#bcbcbca9] p-8">
+          <div className="flex flex-col sm:items-center">
+            <Image src="/fndrs-logo.webp" alt="logo" width={100} height={100} />
+            <p className="text-[#bcbcbca9] mt-4">Make the things with excellence.</p>
+          </div>
+          <ul className="mt-8 flex flex-col sm:flex-row justify-evenly sm:max-w-[400px] sm:mx-auto">
             <li>
               <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#about-us">About Us</a>
             </li>
             <li>
               <a className="font-bold" href="mailto:contact@fndrs.com">
                 contact@fndrs.com
               </a>
             </li>
+            <li>
+              <a href="#about-us">About Us</a>
+            </li>
           </ul>
-          <ul className="flex flex-row mt-2">
+          <ul className="flex flex-row sm:justify-evenly mt-8 sm:max-w-[200px] gap-2 sm:mx-auto">
             {/* TODO: Look for better icons */}
             <li>
               <a href="https://www.instagram.com/the.fndrs" target="_blank">
@@ -42,11 +44,10 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col justify-center items-center text-[#bcbcbca9] p-4">
-          <p>
-            Copyright ©<span className="font-bold"> FNDRS</span>
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-2 text-gray-400 p-4">
+          <p className="text-center sm:text-left">
+            <span className="font-bold">FNDRS</span> © 2025. All rights reserved.
           </p>
-          <p>2025. All rights reserved</p>
         </div>
       </footer>
     </section>
