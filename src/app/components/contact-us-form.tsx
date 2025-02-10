@@ -49,7 +49,7 @@ export default function ContactUsForm() {
   }
 
   return (
-    <form className="flex flex-col gap-2 w-[380px]" onSubmit={handleSubmit(onSubmit)}>
+    <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
       <InputField label="Name" type="text" id="name" register={register} errors={errors} required />
 
       <InputField
@@ -63,8 +63,6 @@ export default function ContactUsForm() {
       />
 
       <InputField label={"Phone"} type="text" id={"phoneNumber"} register={register} errors={errors} required />
-
-      <InputField label={"Subject"} type="text" id={"subject"} register={register} errors={errors} required />
 
       <TextAreaField label={"Tell us about your idea"} register={register} errors={errors} id={"message"} required />
 
