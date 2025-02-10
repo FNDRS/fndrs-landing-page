@@ -13,10 +13,8 @@ export default function ContactUs() {
             <p className="text-xl text-center xl:text-start">We will contact you to discover your incredible project.</p>
           </div>
         </div>
-        <div className="w-full xl:w-6/12 flex items-center justify-center px-12">
-          <div className={"w-full md:w-10/12 2xl:w-6/12"}>
-            <ContactUsForm />
-          </div>
+        <div className="mx-auto min-w-[300px] max-w-[500px] xl:w-6/12">
+          <ContactUsForm />
         </div>
       </div>
     </section>
