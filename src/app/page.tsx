@@ -1,3 +1,4 @@
+import { Footer } from "./components/footer"
 import { Header } from "./components/header"
 import ContactUs from "./components/main-sections/contact-us"
 import SharedIcon from "./components/shared"
@@ -66,6 +67,7 @@ export default function Home() {
         </div>
       </section>
       <ContactUs />
+      <Footer />
     </main>
   )
 }

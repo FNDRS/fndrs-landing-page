@@ -2,13 +2,16 @@ import { SharedIconProps } from "@/app/types"
 
 import React from "react"
 
-import { ArrowDown } from "./icons"
+import { ArrowDown, GitHub, Instagram, Linkedin } from "./icons"
 
 export const components = {
-  arrowDown: ArrowDown
+  arrowDown: ArrowDown,
+  instagram: Instagram,
+  linkedIn: Linkedin,
+  github: GitHub
 }
 
-const SharedIcon = ({ kind, onClick, className }: SharedIconProps) => {
+const SharedIcon = ({ kind, onClick, className = "w-6 h-6" }: SharedIconProps) => {
   const SharedSvg = components[kind]
 
   return (
