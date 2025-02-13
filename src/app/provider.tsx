@@ -10,7 +10,7 @@ export default function Providers({
   return (
     <>
       <Script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></Script>
-      <Toaster />
+      <Toaster position="top-center" reverseOrder={false} />
       {children}
     </>
   )
