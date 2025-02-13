@@ -3,7 +3,7 @@ import { Header } from "./components/header"
 import ContactUs from "./components/main-sections/contact-us"
 import SharedIcon from "./components/shared"
 import { SplineViewer } from "./components/spline-viewer"
-import { abstractTwist, cardsAnimation, whiteParticles } from "./utils/spline-scenes"
+import { cardsAnimation, whiteParticles } from "./utils/spline-scenes"
 
 export default function Home() {
   return (
@@ -19,8 +19,8 @@ export default function Home() {
         </div>
       </section>
       <section className="h-screen flex justify-center">
-        <div className="xl:w-[1200px] flex flex-col xl:flex-row items-center justify-center xl:justify-between p-20 xl:p-0 xl:gap-24">
-          <div className="lg:w-full w-[400px] md:w-[600px] xl:w-[800px] flex flex-col items-center xl:items-start text-center xl:text-left order-1 xl:order-1">
+        <div className="xl:w-[1200px] flex flex-col xl:flex-row items-center justify-center xl:justify-between xl:p-0 xl:gap-24">
+          <div className="lg:w[800px] w-[400px] md:w-[600px] xl:w-[800px] flex flex-col items-center xl:items-start text-center xl:text-left order-1 xl:order-1">
             <h3 className="self-start font-bold text-4xl sm:text-5xl md:text-6xl">Who we are?</h3>
             <h1 className="self-start font-bold text-4xl sm:text-5xl md:text-6xl">Revolutionaries</h1>
             <p className="mt-4 text-lg leading-8 text-justify">
@@ -36,37 +36,37 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="h-screen flex flex-row items-center justify-center min-w-[200px] mx-auto">
-        <div className="w-[1200px] mx-auto">
-          <div className="w-1/2">
-            <h3 className="font-bold text-3xl">What we do?</h3>
-            <h1 className="font-bold text-8xl">Innovate</h1>
-            <div className="border-2 w-[800px] h-[400px]"></div>
-          </div>
-        </div>
-      </section>
-      <section className="h-screen relative">
-        <SplineViewer scene={abstractTwist} className="absolute top-0 left-0 w-full h-full -z-10" />
-        <div className="relative w-[1200px] mx-auto flex flex-row items-center justify-center">
-          <h3 className="font-bold text-3xl w-[400px] text-center">Our goal is to take your business to the next level.</h3>
-        </div>
-        <div className="w-[1200px] mx-auto mt-32">
-          <h3 className="font-bold text-3xl">What we do it?</h3>
-          <h1 className="font-bold text-8xl">Together</h1>
+      {/*<section className="h-screen flex flex-row items-center justify-center min-w-[200px] mx-auto">*/}
+      {/*  <div className="w-[1200px] mx-auto">*/}
+      {/*    <div className="w-1/2">*/}
+      {/*      <h3 className="font-bold text-3xl">What we do?</h3>*/}
+      {/*      <h1 className="font-bold text-8xl">Innovate</h1>*/}
+      {/*      <div className="border-2 w-[800px] h-[400px]"></div>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
+      {/*<section className="h-screen relative">*/}
+      {/*  <SplineViewer scene={abstractTwist} className="absolute top-0 left-0 w-full h-full -z-10" />*/}
+      {/*  <div className="relative w-[1200px] mx-auto flex flex-row items-center justify-center">*/}
+      {/*    <h3 className="font-bold text-3xl w-[400px] text-center">Our goal is to take your business to the next level.</h3>*/}
+      {/*  </div>*/}
+      {/*  <div className="w-[1200px] mx-auto mt-32">*/}
+      {/*    <h3 className="font-bold text-3xl">What we do it?</h3>*/}
+      {/*    <h1 className="font-bold text-8xl">Together</h1>*/}
 
-          <ul className="flex flex-row items-center justify-between mt-16 w-[800px] mx-auto font-bold text-xl relative">
-            {["We embrace your essence", "We create it together", "Time to show it to the world"].map((text, index, arr) => (
-              <li key={index} className="relative w-[150px] text-center leading-6 flex flex-col items-center">
-                {text}
-                <span className="absolute w-5 h-5 bg-white border border-black rounded-full -bottom-8"></span>
-                {index < arr.length - 1 && (
-                  <span className="absolute w-[260px] h-[.5px] bg-white -bottom-6 left-[calc(70%+5px)]"></span>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      {/*    <ul className="flex flex-row items-center justify-between mt-16 w-[800px] mx-auto font-bold text-xl relative">*/}
+      {/*      {["We embrace your essence", "We create it together", "Time to show it to the world"].map((text, index, arr) => (*/}
+      {/*        <li key={index} className="relative w-[150px] text-center leading-6 flex flex-col items-center">*/}
+      {/*          {text}*/}
+      {/*          <span className="absolute w-5 h-5 bg-white border border-black rounded-full -bottom-8"></span>*/}
+      {/*          {index < arr.length - 1 && (*/}
+      {/*            <span className="absolute w-[260px] h-[.5px] bg-white -bottom-6 left-[calc(70%+5px)]"></span>*/}
+      {/*          )}*/}
+      {/*        </li>*/}
+      {/*      ))}*/}
+      {/*    </ul>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
       <ContactUs />
       <Footer />
     </main>
