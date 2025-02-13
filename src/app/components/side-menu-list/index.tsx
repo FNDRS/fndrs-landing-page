@@ -1,5 +1,3 @@
-import { Instagram, Linkedin } from "@/app/components/shared/icons"
-
 import React from "react"
 import { SideMenuItem } from "src/app/components/side-menu-item"
 
@@ -19,12 +17,6 @@ export const SideMenuList: React.FC<MenuListProps> = ({ setIsMenuOpen }) => {
       <SideMenuItem href="#about-us" onClick={() => setIsMenuOpen(false)}>
         About us
       </SideMenuItem>
-      <li>
-        <Instagram />
-      </li>
-      <li>
-        <Linkedin />
-      </li>
     </ul>
   )
 }

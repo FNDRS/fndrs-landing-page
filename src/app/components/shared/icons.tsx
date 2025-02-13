@@ -1,42 +1,5 @@
 import { SVGProps } from "react"
 
-export function ArrowDown(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={24}
-      height={24}
-      fill="none"
-      stroke="currentColor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      className="icon icon-tabler icons-tabler-outline icon-tabler-arrow-down"
-      {...props}>
-      <path stroke="none" d="M0 0h24v24H0z" />
-      <path d="M12 5v14M18 13l-6 6M6 13l6 6" />
-    </svg>
-  )
-}
-export function GitHub(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 256 256" {...props}>
-      <path
-        fill="#fff"
-        strokeMiterlimit={10}
-        d="M10.9 2.1c-4.6.5-8.3 4.2-8.8 8.7-.5 4.7 2.2 8.9 6.3 10.5.3.1.6-.1.6-.5v-1.6s-.4.1-.9.1c-1.4 0-2-1.2-2.1-1.9-.1-.4-.3-.7-.6-1-.3-.1-.4-.1-.4-.2 0-.2.3-.2.4-.2.6 0 1.1.7 1.3 1 .5.8 1.1 1 1.4 1 .4 0 .7-.1.9-.2.1-.7.4-1.4 1-1.8-2.3-.5-4-1.8-4-4 0-1.1.5-2.2 1.2-3-.1-.2-.2-.7-.2-1.4 0-.4 0-.9.2-1.3 0-.2.2-.3.3-.3h.1c.5.1 1.5.4 2.4 1.3.6-.2 1.3-.3 2-.3s1.4.1 2 .3c.9-.9 2-1.2 2.5-1.3h.1c.2 0 .3.1.4.3v1.3c0 .8-.1 1.2-.2 1.4.7.8 1.2 1.8 1.2 3 0 2.2-1.7 3.5-4 4 .6.5 1 1.4 1 2.3v2.6c0 .3.3.6.7.5 3.7-1.5 6.3-5.1 6.3-9.3 0-6-5.1-10.7-11.1-10z"
-        fontFamily="none"
-        fontSize="none"
-        fontWeight="none"
-        style={{
-          mixBlendMode: "normal"
-        }}
-        textAnchor="none"
-        transform="translate(-21.55 -21.602) scale(10.66667)"
-      />
-    </svg>
-  )
-}
 export function Linkedin(props: SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 256 256" {...props}>
@@ -53,34 +16,6 @@ export function Linkedin(props: SVGProps<SVGSVGElement>) {
         textAnchor="none"
         transform="scale(10.66667)"
       />
-    </svg>
-  )
-}
-
-export function Instagram(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 256 256" {...props}>
-      <path
-        fill="#fff"
-        strokeMiterlimit={10}
-        d="M7.547 0C3.39 0 0 3.39 0 7.547v10.906C0 22.61 3.39 26 7.547 26h10.906C22.61 26 26 22.61 26 18.453V7.547C26 3.39 22.61 0 18.453 0zm0 2h10.906A5.53 5.53 0 0 1 24 7.547v10.906A5.53 5.53 0 0 1 18.453 24H7.547A5.53 5.53 0 0 1 2 18.453V7.547A5.53 5.53 0 0 1 7.547 2zM20.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM13 6c-3.855 0-7 3.145-7 7s3.145 7 7 7 7-3.145 7-7-3.145-7-7-7zm0 2c2.773 0 5 2.227 5 5s-2.227 5-5 5-5-2.227-5-5 2.227-5 5-5z"
-        fontFamily="none"
-        fontSize="none"
-        fontWeight="none"
-        style={{
-          mixBlendMode: "normal"
-        }}
-        textAnchor="none"
-        transform="scale(9.84615)"
-      />
-    </svg>
-  )
-}
-
-export function ArrowRight(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <path d="M30.7071 8.70711C31.0976 8.31659 31.0976 7.68342 30.7071 7.2929L24.3431 0.928934C23.9526 0.53841 23.3195 0.53841 22.9289 0.928934C22.5384 1.31946 22.5384 1.95262 22.9289 2.34315L28.5858 8L22.9289 13.6569C22.5384 14.0474 22.5384 14.6805 22.9289 15.0711C23.3195 15.4616 23.9526 15.4616 24.3431 15.0711L30.7071 8.70711ZM-8.74228e-08 9L30 9L30 7L8.74228e-08 7L-8.74228e-08 9Z" />
     </svg>
   )
 }

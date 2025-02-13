@@ -1,4 +1,5 @@
-import { ArrowRight } from "@/app/components/shared/icons"
+import SharedIcon from "@/app/components/shared"
+import { SideMenuSocials } from "@/app/components/side-menu-socials"
 
 import Image from "next/image"
 import React from "react"
@@ -14,10 +15,11 @@ export const SideMenu: React.FC<SideMenuProps> = ({ setIsMenuOpen }) => {
       <div className="flex flex-col gap-20">
         <Image src="/fndrs-logo.webp" alt="FNDRS" width={100} height={100} />
         <SideMenuList setIsMenuOpen={setIsMenuOpen} />
+        <SideMenuSocials />
       </div>
       <div>
         <button className="text-white" onClick={() => setIsMenuOpen(false)}>
-          <ArrowRight fill="white" />
+          <SharedIcon kind="xIcon" />
         </button>
       </div>
     </div>
