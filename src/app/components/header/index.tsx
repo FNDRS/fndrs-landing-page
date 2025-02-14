@@ -1,25 +1,33 @@
+"use client"
+
+import { NavLinks } from "@/app/components/nav-links"
+import { SideMenu } from "@/app/components/side-menu"
+
+import { Menu } from "lucide-react"
 import Image from "next/image"
-import React from "react"
+import React, { useState } from "react"
 
 export const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   return (
-    <div className="px-16 py-6 flex flex-row justify-between">
-      <div>
-        <Image src="/fndrs-logo.webp" alt="FNDRS" width={100} height={100} />
+    <header className="bg-black text-white">
+      <div className="px-10 py-6 flex justify-center sm:justify-between items-center">
+        <div className="flex-none self-start">
+          <button className="self-start sm:hidden focus:outline-none" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <Menu className="w-6 h-6" />
+          </button>
+        </div>
+
+        <div className="flex-1 flex justify-center sm:justify-start">
+          <Image src="/fndrs-logo.webp" alt="FNDRS" width={100} height={100} />
+        </div>
+
+        <div className="hidden sm:block">
+          <NavLinks />
+        </div>
       </div>
-      <div>
-        <ul className="flex flex-row justify-between gap-8">
-          <li>
-            <a href="#services">Services</a>
-          </li>
-          <li>
-            <a href="#about-us">About us</a>
-          </li>
-          <li>
-            <a href="#get-in-contact">Get in contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+
+      {isMenuOpen && <SideMenu setIsMenuOpen={setIsMenuOpen} />}
+    </header>
   )
 }
