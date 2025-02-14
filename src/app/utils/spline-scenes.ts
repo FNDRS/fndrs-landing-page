@@ -6,3 +6,5 @@ export const purpleParticles = "https://prod.spline.design/9Q2Svy920i208lUS/scen
 export const orangeParticles = "https://prod.spline.design/PBf0u6zCCDzT0rax/scene.splinecode"
 export const abstractTwist = "https://prod.spline.design/QIWZREJyZINgRFva/scene.splinecode"
 export const cardsAnimation = "https://prod.spline.design/RVxppLzCdgCIh8KM/scene.splinecode"
+export const keyboardAnimation = "https://prod.spline.design/4jaKZNiJ17RGatnN/scene.splinecode"
+export const liquidAnimation = "https://prod.spline.design/kdv0g7xL3HtW-efo/scene.splinecode"
