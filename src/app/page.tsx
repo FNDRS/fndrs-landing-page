@@ -3,14 +3,15 @@ import { Header } from "./components/header"
 import ContactUs from "./components/main-sections/contact-us"
 import SharedIcon from "./components/shared"
 import { SplineViewer } from "./components/spline-viewer"
-import { abstractTwist, cardsAnimation, whiteParticles } from "./utils/spline-scenes"
+import { abstractTwist, keyboardAnimation, liquidAnimation } from "./utils/spline-scenes"
 
 export default function Home() {
   return (
     <main>
       <Header />
       <section className="relative flex flex-row items-center justify-center h-screen">
-        <SplineViewer scene={whiteParticles} className="absolute sm:h-fit -z-10" />
+        <SplineViewer scene={liquidAnimation} className="absolute sm:h-fit -z-10" />
+
         <div className="relative flex flex-col text-center items-center gap-8 ">
           <h2 className="text-xl">Make things with</h2>
           <h1 className="uppercase text-6xl font-extrabold">excellence</h1>
@@ -31,8 +32,8 @@ export default function Home() {
             <button className="bg-white hover:bg-gray-200 text-black py-2 px-12 rounded-xl mt-4 w-fit self-start">Know Us</button>
           </div>
 
-          <div className="order-2 w-[350px] sm:w-[400px] md:w-[600px]">
-            <SplineViewer scene={cardsAnimation} />
+          <div className="order-2 w-fit sm:w-[400px] md:w-[600px] h-[400px]">
+            <SplineViewer scene={keyboardAnimation} />
           </div>
         </div>
       </section>
