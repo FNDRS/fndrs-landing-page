@@ -5,7 +5,7 @@ import SharedIcon from "../shared"
 
 export const Footer = () => {
   return (
-    <section className="h-[50vh] flex flex-col justify-end">
+    <section className="h-[35vh] flex flex-col">
       <footer>
         <div className="border-y-[1px] items-center w-full sm:border-none border-[#bcbcbca9] p-8">
           <div className="flex flex-col sm:items-center">
