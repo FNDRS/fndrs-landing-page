@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 
 import { Footer } from "./components/footer"
 import { Header } from "./components/header"
@@ -10,59 +10,64 @@ import { SplineViewer } from "./components/spline-viewer"
 import { abstractTwist, keyboardAnimation, liquidAnimation } from "./utils/spline-scenes"
 
 export default function Home() {
-  const [currentSection, setCurrentSection] = useState<number>(0)
-  const sections = useRef(["header", "about-us", "what-we-do", "services", "contact-us", "footer"])
-  const scrollThreshold = 80
+  const [currentSection, setCurrentSection] = useState(0)
+  const SCROLL_THRESHOLD = 80
+  const sections = useRef<string[]>(["header", "about-us", "what-we-do", "services", "contact-us", "footer"])
+
   const accumulatedScroll = useRef(0)
 
-  useEffect(() => {
-    const handleWheelScroll = (e: WheelEvent) => {
+  const goToSection = useCallback((index: number) => {
+    if (index >= 0 && index < sections.current.length) {
+      setCurrentSection(index)
+      document.getElementById(sections.current[index])?.scrollIntoView({ behavior: "smooth" })
+    }
+  }, [])
+
+  const handleWheel = useCallback(
+    (e: WheelEvent) => {
       e.preventDefault()
       accumulatedScroll.current += 1
 
-      if (accumulatedScroll.current >= scrollThreshold) {
-        const direction = e.deltaY > 0 ? 1 : -1
-        accumulatedScroll.current = 0
+      if (accumulatedScroll.current < SCROLL_THRESHOLD) return
+      accumulatedScroll.current = 0
+      const direction = e.deltaY > 0 ? 1 : -1
+      const nextSection = currentSection + direction
 
-        const nextSectionIndex = Math.min(Math.max(currentSection + direction, 0), sections.current.length - 1)
+      if (nextSection >= 0 && nextSection < sections.current.length) {
+        goToSection(nextSection)
+      }
+    },
+    [currentSection, goToSection]
+  )
 
-        if (nextSectionIndex !== currentSection) {
-          setCurrentSection(nextSectionIndex)
-          document.getElementById(sections.current[nextSectionIndex])?.scrollIntoView({ behavior: "smooth" })
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault()
+        const direction = e.key === "ArrowDown" ? 1 : -1
+        const nextSection = currentSection + direction
+
+        if (nextSection >= 0 && nextSection < sections.current.length) {
+          goToSection(nextSection)
         }
       }
-    }
+    },
+    [currentSection, goToSection]
+  )
 
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowDown") {
-        e.preventDefault()
-        const nextSectionIndex = Math.min(currentSection + 1, sections.current.length - 1)
-        if (nextSectionIndex !== currentSection) {
-          setCurrentSection(nextSectionIndex)
-          document.getElementById(sections.current[nextSectionIndex])?.scrollIntoView({ behavior: "smooth" })
-        }
-      } else if (e.key === "ArrowUp") {
-        e.preventDefault()
-        const prevSectionIndex = Math.max(currentSection - 1, 0)
-        if (prevSectionIndex !== currentSection) {
-          setCurrentSection(prevSectionIndex)
-          document.getElementById(sections.current[prevSectionIndex])?.scrollIntoView({ behavior: "smooth" })
-        }
-      }
-    }
-
-    window.addEventListener("wheel", handleWheelScroll, { passive: false })
+  useEffect(() => {
+    window.addEventListener("wheel", handleWheel, { passive: false })
     window.addEventListener("keydown", handleKeyDown)
 
     return () => {
-      window.removeEventListener("wheel", handleWheelScroll)
+      window.removeEventListener("wheel", handleWheel)
       window.removeEventListener("keydown", handleKeyDown)
     }
-  }, [currentSection])
+  }, [handleWheel, handleKeyDown])
 
   return (
     <main>
-      <Header />
+      <Header goToSection={goToSection} />
       <section className="relative flex flex-row items-center justify-center h-screen -top-20 sm:-top-8" id="section-1">
         <SplineViewer scene={liquidAnimation} className="absolute sm:h-fit -z-10" />
 
@@ -72,8 +77,7 @@ export default function Home() {
           <button
             onClick={(e) => {
               e.preventDefault()
-              setCurrentSection(4)
-              document.getElementById("contact-us")?.scrollIntoView({ behavior: "smooth" })
+              goToSection(4)
             }}
             className="bg-white hover:bg-gray-200 text-black py-2 px-12 rounded-xl mt-4 w-fit">
             Let&apos;s Create
@@ -83,8 +87,7 @@ export default function Home() {
             className="relative top-20 sm:top-0 cursor-pointer"
             onClick={(e) => {
               e.preventDefault()
-              setCurrentSection(1)
-              document.getElementById("about-us")?.scrollIntoView({ behavior: "smooth" })
+              goToSection(1)
             }}
           />
         </div>
@@ -143,7 +146,7 @@ export default function Home() {
         </div>
       </section>
       <ContactUs />
-      <Footer />
+      <Footer goToSection={goToSection} />
     </main>
   )
 }

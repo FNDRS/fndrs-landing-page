@@ -1,20 +1,24 @@
 import React from "react"
 
-export const NavLinks: React.FC = () => {
+interface NavLinksProps {
+  goToSection?: (index: number) => void
+}
+
+export const NavLinks: React.FC<NavLinksProps> = ({ goToSection = () => {} }: NavLinksProps) => {
   return (
     <ul className="flex flex-row justify-between gap-8">
       <li>
-        <a href="#services" className="hover:text-gray-400">
+        <a className="hover:text-gray-400" onClick={() => goToSection(3)}>
           Services
         </a>
       </li>
       <li>
-        <a href="#about-us" className="hover:text-gray-400">
+        <a className="hover:text-gray-400" onClick={() => goToSection(2)}>
           About us
         </a>
       </li>
       <li>
-        <a href="#get-in-contact" className="hover:text-gray-400">
+        <a className="hover:text-gray-400" onClick={() => goToSection(4)}>
           Get in contact
         </a>
       </li>

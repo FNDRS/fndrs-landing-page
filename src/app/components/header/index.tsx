@@ -1,5 +1,3 @@
-"use client"
-
 import { NavLinks } from "@/app/components/nav-links"
 import { SideMenu } from "@/app/components/side-menu"
 
@@ -7,7 +5,11 @@ import { Menu } from "lucide-react"
 import Image from "next/image"
 import React, { useState } from "react"
 
-export const Header = () => {
+interface HeaderProps {
+  goToSection?: (index: number) => void
+}
+
+export const Header = ({ goToSection = () => {} }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   return (
     <header className="bg-black text-white" id="header">
@@ -23,7 +25,7 @@ export const Header = () => {
         </div>
 
         <div className="hidden sm:block">
-          <NavLinks />
+          <NavLinks goToSection={goToSection} />
         </div>
       </div>
 
