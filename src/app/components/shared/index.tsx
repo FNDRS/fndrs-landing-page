@@ -18,7 +18,7 @@ const SharedIcon = ({ kind, onClick, className = "w-6 h-6" }: SharedIconProps) =
   const SharedSvg = components[kind]
 
   return (
-    <div onClick={onClick} style={{ display: "inline-block", cursor: onClick ? "pointer" : "default" }}>
+    <div style={{ display: "inline-block", cursor: onClick ? "pointer" : "default" }}>
       <SharedSvg className={className} />
     </div>
   )
