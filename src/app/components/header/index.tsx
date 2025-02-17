@@ -1,5 +1,3 @@
-"use client"
-
 import { NavLinks } from "@/app/components/nav-links"
 import { SideMenu } from "@/app/components/side-menu"
 
@@ -7,10 +5,14 @@ import { Menu } from "lucide-react"
 import Image from "next/image"
 import React, { useState } from "react"
 
-export const Header = () => {
+interface HeaderProps {
+  goToSection?: (index: number) => void
+}
+
+export const Header = ({ goToSection = () => {} }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
   return (
-    <header className="bg-black text-white">
+    <header className="bg-black text-white" id="header">
       <div className="px-10 py-6 flex justify-center sm:justify-between items-center">
         <div className="flex-none self-start">
           <button className="self-start sm:hidden focus:outline-none" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -23,7 +25,7 @@ export const Header = () => {
         </div>
 
         <div className="hidden sm:block">
-          <NavLinks />
+          <NavLinks goToSection={goToSection} />
         </div>
       </div>
 
