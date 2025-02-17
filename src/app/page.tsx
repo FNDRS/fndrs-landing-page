@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react"
 
+import { CardBoxes } from "./components/card-boxes"
 import { Footer } from "./components/footer"
 import { Header } from "./components/header"
 import ContactUs from "./components/main-sections/contact-us"
@@ -119,8 +120,8 @@ export default function Home() {
           <div className="w-1/2">
             <h3 className="font-bold text-3xl">what we do?</h3>
             <h1 className="font-bold text-8xl">Innovate</h1>
-            <div className="border-2 w-[800px] h-[400px]"></div>
           </div>
+          <CardBoxes />
         </div>
       </section>
       <section className="h-screen relative" id="services">
