@@ -3,9 +3,13 @@ import React from "react"
 
 import SharedIcon from "../shared"
 
-export const Footer = () => {
+interface FooterProps {
+  goToSection?: (index: number) => void
+}
+
+export const Footer: React.FC<FooterProps> = ({ goToSection = () => {} }: FooterProps) => {
   return (
-    <section className="h-[50vh] flex flex-col justify-end">
+    <section className="h-[35vh] flex flex-col" id="footer">
       <footer>
         <div className="border-y-[1px] items-center w-full sm:border-none border-[#bcbcbca9] p-8">
           <div className="flex flex-col sm:items-center">
@@ -14,7 +18,12 @@ export const Footer = () => {
           </div>
           <ul className="mt-8 flex flex-col sm:flex-row justify-evenly sm:max-w-[400px] sm:mx-auto">
             <li>
-              <a href="#services">Services</a>
+              <a
+                onClick={() => {
+                  goToSection(3)
+                }}>
+                Services
+              </a>
             </li>
             <li>
               <a className="font-bold" href="mailto:contact@fndrs.com">
@@ -22,7 +31,12 @@ export const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#about-us">About Us</a>
+              <a
+                onClick={() => {
+                  goToSection(1)
+                }}>
+                About Us
+              </a>
             </li>
           </ul>
           <ul className="flex flex-row sm:justify-evenly mt-8 sm:max-w-[200px] gap-2 sm:mx-auto">
