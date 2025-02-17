@@ -20,12 +20,12 @@ export default function InputField<T extends FieldValues>({
   errors,
   required,
   pattern,
-  inputClassName = "border rounded-md p-2 bg-transparent flex-1 min-w-0 autofill:bg-transparent"
+  inputClassName = "border rounded-md p-1 sm:p-2 bg-transparent flex-1 min-w-0 autofill:bg-transparent"
 }: InputFieldProps<T>) {
   return (
     <div className="w-full flex flex-col my-1">
       {label && (
-        <label className="text-xl mb-2" htmlFor={id.toString()}>
+        <label className="text-lg sm:text-xl mb-2" htmlFor={id.toString()}>
           {label}
         </label>
       )}
