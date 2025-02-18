@@ -115,14 +115,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="h-screen flex flex-row items-center justify-center min-w-[200px] mx-auto" id="what-we-do">
-        <div className="w-[1200px] mx-auto">
-          <div className="w-1/2">
-            <h3 className="font-bold text-3xl">what we do?</h3>
-            <h1 className="font-bold text-8xl">Innovate</h1>
-          </div>
-          <CardBoxes />
+      <section
+        className="w-full xl:w-[1200px] mx-auto lg:h-screen flex flex-col items-center justify-center p-8 "
+        id="what-we-do">
+        <div className="w-full">
+          <h3 className="font-bold text-xl lg:text-2xl">what we do?</h3>
+          <h1 className="font-bold text-3xl lg:text-8xl">Innovate</h1>
         </div>
+        <CardBoxes />
       </section>
       <section className="h-screen relative" id="services">
         <SplineViewer scene={abstractTwist} className="absolute top-0 left-0 w-full h-full -z-10" />
