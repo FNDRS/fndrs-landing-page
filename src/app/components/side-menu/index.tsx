@@ -7,14 +7,15 @@ import { SideMenuList } from "src/app/components/side-menu-list"
 
 interface SideMenuProps {
   setIsMenuOpen: (value: boolean) => void
+  goToSection: (sectionId: string) => void
 }
 
-export const SideMenu: React.FC<SideMenuProps> = ({ setIsMenuOpen }) => {
+export const SideMenu: React.FC<SideMenuProps> = ({ setIsMenuOpen, goToSection }) => {
   return (
-    <div className="fixed inset-0 bg-[#151515] z-50 flex flex-row justify-between w-[440px] p-14 lg:hidden">
+    <div className="fixed inset-0 bg-[#151515] z-50 flex flex-row justify-between w-[350px] sm:w-[440px] p-14 lg:hidden">
       <div className="flex flex-col gap-20">
         <Image src="/fndrs-logo.webp" alt="FNDRS" width={100} height={100} />
-        <SideMenuList setIsMenuOpen={setIsMenuOpen} />
+        <SideMenuList setIsMenuOpen={setIsMenuOpen} goToSection={goToSection} />
         <SideMenuSocials />
       </div>
       <div>

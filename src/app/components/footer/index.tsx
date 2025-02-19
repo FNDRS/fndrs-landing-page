@@ -4,7 +4,7 @@ import React from "react"
 import SharedIcon from "../shared"
 
 interface FooterProps {
-  goToSection?: (index: number) => void
+  goToSection?: (sectionId: string) => void
 }
 
 export const Footer: React.FC<FooterProps> = ({ goToSection = () => {} }: FooterProps) => {
@@ -19,8 +19,9 @@ export const Footer: React.FC<FooterProps> = ({ goToSection = () => {} }: Footer
           <ul className="mt-8 flex flex-col sm:flex-row justify-evenly sm:max-w-[400px] sm:mx-auto">
             <li>
               <a
+                className="hover:cursor-pointer"
                 onClick={() => {
-                  goToSection(3)
+                  goToSection("services")
                 }}>
                 Services
               </a>
@@ -32,8 +33,9 @@ export const Footer: React.FC<FooterProps> = ({ goToSection = () => {} }: Footer
             </li>
             <li>
               <a
+                className="hover:cursor-pointer"
                 onClick={() => {
-                  goToSection(1)
+                  goToSection("about-us")
                 }}>
                 About Us
               </a>
