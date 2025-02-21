@@ -6,7 +6,7 @@ import Image from "next/image"
 import React, { useState } from "react"
 
 interface HeaderProps {
-  goToSection?: (index: number) => void
+  goToSection?: (sectionId: string) => void
 }
 
 export const Header = ({ goToSection = () => {} }: HeaderProps) => {
@@ -29,7 +29,7 @@ export const Header = ({ goToSection = () => {} }: HeaderProps) => {
         </div>
       </div>
 
-      {isMenuOpen && <SideMenu setIsMenuOpen={setIsMenuOpen} />}
+      {isMenuOpen && <SideMenu setIsMenuOpen={setIsMenuOpen} goToSection={goToSection} />}
     </header>
   )
 }

@@ -26,7 +26,7 @@ export default function TextAreaField<T extends FieldValues>({
         {label}
       </label>
       <textarea
-        className={`w-full border rounded-md p-2 bg-transparent resize-none h-40 autofill:bg-transparent ${errors[id] ? "border-red-500" : "border-[#bcbcbca9]"} w-full focus-visible:border-white focus-visible:outline-none focus-visible:ring-white"}`}
+        className={`w-full border rounded-md p-2 bg-transparent resize-none h-32 sm:h-40 autofill:bg-transparent ${errors[id] ? "border-red-500" : "border-[#bcbcbca9]"} w-full focus-visible:border-white focus-visible:outline-none focus-visible:ring-white"}`}
         {...register(id, { required: required && `${labelError || "Field"} is required`, pattern })}
       />
       <p
