@@ -9,10 +9,10 @@ export const HeroSection = () => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
   }
   return (
-    <section className="flex flex-row items-center justify-center h-screen -top-20 sm:-top-8" id="section-1">
+    <section className="flex flex-row items-center justify-center h-screen -top-20 sm:-top-8 " id="section-1">
       <SplineViewer scene={liquidAnimation} className="absolute sm:h-fit -z-10" />
 
-      <div className="relative flex flex-col text-center items-center gap-8 ">
+      <div className="relative flex flex-col text-center items-center gap-8 xl:w-[1200px]">
         <h2 className="text-xl">Make things with</h2>
         <h1 className="uppercase text-6xl font-extrabold">excellence</h1>
         <button

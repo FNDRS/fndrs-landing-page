@@ -5,8 +5,8 @@ import React from "react"
 
 export const OurGoal = () => {
   return (
-    <section className="h-screen relative" id="services">
-      <SplineViewer scene={abstractTwist} className="absolute top-0 left-0 w-full h-full -z-10" />
+    <section className="h-screen" id="services">
+      <SplineViewer scene={abstractTwist} className="absolute -z-10" />
       <div className="flex flex-col h-full items-center ">
         <div className="w-[350px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] flex flex-row justify-center items-center flex-1">
           <h3 className="font-bold sm:text-3xl md:text-4xl w-[500px] text-center">
