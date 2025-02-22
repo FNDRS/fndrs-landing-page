@@ -6,7 +6,7 @@ import { SplineViewer } from "../spline-viewer"
 
 export const CardBoxes = () => {
   return (
-    <div className="lg:h-[600px]">
+    <div className="lg:h-[600px] xl:w-[1200px]">
       <div className="flex flex-col lg:flex-row h-full">
         <div className="flex flex-col pt-12 pb-2 items-center w-full justify-center gap-4">
           <div className="border-2 border-[#650208] h-fit max-w-[444px] lg:max-w-full xl:w-[850px] lg:h-[460px] rounded-[35px] p-[2rem] relative">
