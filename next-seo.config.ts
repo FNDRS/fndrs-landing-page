@@ -1,7 +1,7 @@
 const SEO = {
     title: 'FNDRS - Make things with excellence',
     description:
-        'FNDRS es un estudio creativo que transforma ideas en soluciones innovadoras.',
+        'FNDRS is a creative studio that transforms ideas into innovative solutions.',
     canonical: 'https://www.thefndrs.com',
     openGraph: {
         type: 'website',
