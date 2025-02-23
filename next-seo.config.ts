@@ -1,6 +1,5 @@
-import {DefaultSeoProps} from "next-seo";
 
-const SEO: DefaultSeoProps = {
+const SEO = {
     title: 'FNDRS - Make things with excellence',
     description:
         'FNDRS is a creative studio that transforms ideas into innovative solutions.',

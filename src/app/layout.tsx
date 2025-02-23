@@ -1,6 +1,6 @@
-import type { Metadata } from "next"
-
 import "@/app/globals.css"
+
+import { Metadata } from "next"
 
 import SEO from "../../next-seo.config"
 import Providers from "./provider"
