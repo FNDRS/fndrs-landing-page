@@ -1,6 +1,7 @@
-import Spline from "@splinetool/react-spline"
+import { LoaderIcon } from "lucide-react"
+import React, { FC, Suspense } from "react"
 
-import React, { FC } from "react"
+const Spline = React.lazy(() => import("@splinetool/react-spline"))
 
 interface SplineViewerProps {
   scene: string
@@ -11,5 +12,11 @@ export const SplineViewer: FC<SplineViewerProps> = ({ scene, className }) => {
     return <p className="w-full p-10 flex items-center justify-center">Error: No Spline URL provided</p>
   }
 
-  return <Spline scene={scene} className={className} />
+  return (
+    <>
+      <Suspense fallback={<LoaderIcon />}>
+        <Spline scene={scene} className={className} />
+      </Suspense>
+    </>
+  )
 }
