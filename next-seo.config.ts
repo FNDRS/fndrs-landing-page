@@ -16,7 +16,7 @@ const SEO: Metadata = {
     description: "FNDRS is a creative studio that transforms ideas into innovative solutions.",
     images: [
       {
-        url: "https://www.thefndrs.com/_next/image?url=%2Ffndrs-logo.webp&w=128&q=75",
+        url: "https://www.thefndrs.com/og.png",
         width: 1200,
         height: 630,
         alt: "FNDRS - Make things with excellence"
