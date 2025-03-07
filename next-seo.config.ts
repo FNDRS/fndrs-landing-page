@@ -24,7 +24,17 @@ const SEO: Metadata = {
     ]
   },
   twitter: {
-    site: "@FNDRS"
+    card: "summary_large_image",
+    site: "@FNDRS",
+    creator: "@FNDRS",
+    title: "FNDRS - Make things with excellence",
+    description: "FNDRS is a creative studio that transforms ideas into innovative solutions.",
+    images: [
+      {
+        url: "https://www.thefndrs.com/og.png",
+        alt: "FNDRS - Make things with excellence"
+      }
+    ]
   }
 }
 
