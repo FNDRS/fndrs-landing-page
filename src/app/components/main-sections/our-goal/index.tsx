@@ -43,7 +43,7 @@ export const OurGoal = () => {
           ref={howWeDoItRef}
           style={{ opacity: howWeDoItOpacity, y: howWeDoItY }}>
           <h3 className="font-bold text-1xl sm:text-2xl md:text-3xl">how we do it?</h3>
-          <h1 className="font-bold text-5xl sm:text-6xl md:text-8xl">Together</h1>
+          <h2 className="font-bold text-5xl sm:text-6xl md:text-8xl">Together</h2>
         </motion.div>
 
         <motion.div

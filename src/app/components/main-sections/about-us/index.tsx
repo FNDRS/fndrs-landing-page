@@ -31,7 +31,7 @@ export const AboutUs = () => {
         <div className="lg:w[800px] w-[350px] md:w-[600px] xl:w-[800px] flex flex-col items-center xl:items-start text-center xl:text-left order-1 xl:order-1 justify-center">
           <motion.div ref={titleRef} style={{ opacity: titleOpacity, y: titleY }}>
             <h3 className="self-start font-bold text-3xl sm:text-4xl md:text-3xl">who we are?</h3>
-            <h1 className="self-start font-bold text-4xl sm:text-5xl md:text-7xl">Revolutionaries</h1>
+            <h2 className="self-start font-bold text-4xl sm:text-5xl md:text-7xl">Revolutionaries</h2>
           </motion.div>
 
           <motion.p
