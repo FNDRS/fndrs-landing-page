@@ -24,24 +24,8 @@ const SEO: Metadata = {
     ]
   },
   twitter: {
-    handle: "@FNDRS",
-    site: "@FNDRS",
-    cardType: "summary_large_image"
-  },
-  additionalMetaTags: [
-    {
-      name: "author",
-      content: "FNDRS"
-    },
-    {
-      name: "keywords",
-      content: "FNDRS, Creative Studio, Design, Innovation, Branding, Excellence, Web Development, Digital Solutions"
-    },
-    {
-      name: "robots",
-      content: "index, follow"
-    }
-  ]
+    site: "@FNDRS"
+  }
 }
 
 export default SEO
