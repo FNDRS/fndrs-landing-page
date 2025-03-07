@@ -4,12 +4,12 @@ import React, { useState } from "react"
 
 import { SplineViewer } from "../spline-viewer"
 
+interface CardScaleClassProps {
+  cardId: string
+}
+
 export const CardBoxes = () => {
   const [hoveredCard, setHoveredCard] = useState<string | null>(null)
-
-  interface CardScaleClassProps {
-    cardId: string
-  }
 
   const cardScaleClass = ({ cardId }: CardScaleClassProps): string => {
     if (!hoveredCard) return "transform scale-100"
