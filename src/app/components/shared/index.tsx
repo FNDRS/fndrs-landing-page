@@ -1,16 +1,15 @@
 import { SharedIconProps } from "@/app/types"
-import { SiGithub, SiInstagram } from "@icons-pack/react-simple-icons"
 
 import { ArrowDown, XIcon } from "lucide-react"
 import React from "react"
 
-import { Linkedin } from "./icons"
+import { GitHub, Instagram, LinkedIn } from "./icons"
 
 export const components = {
   arrowDown: ArrowDown,
-  instagram: SiInstagram,
-  linkedIn: Linkedin,
-  github: SiGithub,
+  instagram: Instagram,
+  linkedIn: LinkedIn,
+  github: GitHub,
   xIcon: XIcon
 }
 

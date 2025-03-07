@@ -42,7 +42,6 @@ export const Footer: React.FC<FooterProps> = ({ goToSection = () => {} }: Footer
             </li>
           </ul>
           <ul className="flex flex-row sm:justify-evenly mt-8 sm:max-w-[200px] gap-2 sm:mx-auto">
-            {/* TODO: Look for better icons */}
             <li>
               <a href="https://www.instagram.com/the.fndrs" target="_blank">
                 <SharedIcon kind="instagram" className="h-4 w-[20px] text-white" />
