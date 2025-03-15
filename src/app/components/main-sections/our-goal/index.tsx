@@ -28,7 +28,7 @@ export const OurGoal = () => {
     visible: (index: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: 2 + index * 0.5, duration: 0.6, ease: "easeOut" }
+      transition: { delay: index * 0.5, duration: 0.6, ease: "easeOut" }
     })
   }
 
@@ -41,7 +41,7 @@ export const OurGoal = () => {
           className="w-[350px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] flex flex-row justify-center items-center flex-1"
           style={{ opacity: goalOpacity, y: goalY }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}>
+          transition={{ duration: 0.5, ease: "easeOut" }}>
           <h3 className="font-bold sm:text-3xl md:text-4xl w-[500px] text-center">
             Our goal is to take your business to the next level.
           </h3>
@@ -51,7 +51,7 @@ export const OurGoal = () => {
           className="w-[350px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] flex flex-col flex-1"
           style={{ opacity: howWeDoItOpacity, y: howWeDoItY }}
           animate={{ opacity: 1, y: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 1 }}>
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}>
           <h3 className="font-bold text-1xl sm:text-2xl md:text-3xl">how we do it?</h3>
           <h2 className="font-bold text-5xl sm:text-6xl md:text-8xl">Together</h2>
         </motion.div>
@@ -60,7 +60,7 @@ export const OurGoal = () => {
           ref={stepsRef}
           className="w-[350px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] flex flex-col flex-[3] md:flex-[2] items-center"
           animate={{ opacity: 1, x: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}>
+          transition={{ duration: 0.5, ease: "easeOut" }}>
           <ul className="flex flex-col md:flex-row items-center justify-between md:w-[700px] lg:w-[800px] font-bold">
             {steps.map((text, index, arr) => (
               <motion.li
