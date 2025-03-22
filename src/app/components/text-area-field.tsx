@@ -31,7 +31,7 @@ export default function TextAreaField<T extends FieldValues>({
       />
       <p
         className={`text-red-500 m-0
-                ${errors[id] ? "opacity-1" : "opacity-0"}`}>
+                ${errors[id] ? "opacity-100" : "opacity-0"}`}>
         {errors[id]?.message?.toString() || "Error"}
       </p>
     </div>
