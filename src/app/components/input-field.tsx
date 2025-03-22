@@ -35,8 +35,9 @@ export default function InputField<T extends FieldValues>({
         {...register(id, { required: required && `${label} is required`, pattern })}
       />
       <p
-        className={`text-red-500 m-0
-                ${errors[id] ? "opacity-1" : "opacity-0"}`}>
+        className={`text-red-500 text-sm min-h-[1rem] transition-opacity duration-300 ${
+          errors[id] ? "opacity-100" : "opacity-0"
+        }`}>
         {errors[id]?.message?.toString() || "Error"}
       </p>
     </div>
