@@ -22,7 +22,7 @@ export const CardBoxes = () => {
   return (
     <div className="lg:h-[600px] xl:w-[1200px]">
       <div className="flex flex-col lg:flex-row h-full">
-        <div className="flex flex-col pt-12 pb-2 items-center w-full justify-center gap-4">
+        <div className="flex flex-col items-center w-full justify-center gap-4">
           <div
             onMouseEnter={() => setHoveredCard("card1")}
             onMouseLeave={() => setHoveredCard(null)}
@@ -50,7 +50,7 @@ export const CardBoxes = () => {
           <div
             onMouseEnter={() => setHoveredCard("card3")}
             onMouseLeave={() => setHoveredCard(null)}
-            className={`${cardScaleClass({ cardId: "card3" })} transition-transform duration-300 border-2 border-[#8A12DF] max-w-[444px] h-fit lg:h-[194px] rounded-[35px] p-6 relative`}>
+            className={`${cardScaleClass({ cardId: "card3" })} transition-transform duration-300 border-2 border-[#8A12DF] h-fit lg:h-[194px] rounded-[35px] p-6 relative w-full`}>
             <SplineViewer scene={purpleParticles} className="absolute top-0 left-0 w-full h-full -z-10" />
             <p>Storytelling with purpose. We create content that connects and drives impact.</p>
             <h2 className="text-[#8A12DF] font-bold text-lg mt-4">Content Strategy</h2>
@@ -58,7 +58,7 @@ export const CardBoxes = () => {
           <div
             onMouseEnter={() => setHoveredCard("card4")}
             onMouseLeave={() => setHoveredCard(null)}
-            className={`${cardScaleClass({ cardId: "card4" })} transition-transform duration-300 border-2 border-[#3557FF] max-w-[444px] h-fit lg:h-[404px] rounded-[35px] p-4 relative`}>
+            className={`${cardScaleClass({ cardId: "card4" })} transition-transform duration-300 border-2 border-[#3557FF]  h-fit lg:h-[404px] rounded-[35px] p-4 relative w-full`}>
             <SplineViewer scene={blueParticles} className="absolute top-0 left-0 w-full h-full -z-10" />
             <h2 className="text-[#3557FF] font-bold text-lg mb-4">Web Development</h2>
             <p>
