@@ -37,7 +37,7 @@ export const CardBoxes = () => {
           <div
             onMouseEnter={() => setHoveredCard("card2")}
             onMouseLeave={() => setHoveredCard(null)}
-            className={`${cardScaleClass({ cardId: "card2" })} transition-transform duration-300 border-2 border-[#DF9512] max-w-[444px] h-fit lg:w-[500px] lg:h-[140px] rounded-[35px] p-4 relative`}>
+            className={`${cardScaleClass({ cardId: "card2" })} transition-transform duration-300 border-2 border-[#DF9512]  w-full h-fit md:w-[444px]  lg:h-[140px] rounded-[35px] p-4 relative`}>
             <SplineViewer scene={orangeParticles} className="absolute top-0 left-0 w-full h-full -z-10" />
             <h2 className="text-[#DF9512] font-bold text-xl">Branding & Identity</h2>
             <p>
@@ -50,7 +50,7 @@ export const CardBoxes = () => {
           <div
             onMouseEnter={() => setHoveredCard("card3")}
             onMouseLeave={() => setHoveredCard(null)}
-            className={`${cardScaleClass({ cardId: "card3" })} transition-transform duration-300 border-2 border-[#8A12DF] h-fit lg:h-[194px] rounded-[35px] p-6 relative w-full`}>
+            className={`${cardScaleClass({ cardId: "card3" })} transition-transform duration-300 border-2 border-[#8A12DF] h-fit lg:h-[194px] md:w-[444px] rounded-[35px] p-6 relative w-full`}>
             <SplineViewer scene={purpleParticles} className="absolute top-0 left-0 w-full h-full -z-10" />
             <p>Storytelling with purpose. We create content that connects and drives impact.</p>
             <h2 className="text-[#8A12DF] font-bold text-lg mt-4">Content Strategy</h2>
@@ -58,7 +58,7 @@ export const CardBoxes = () => {
           <div
             onMouseEnter={() => setHoveredCard("card4")}
             onMouseLeave={() => setHoveredCard(null)}
-            className={`${cardScaleClass({ cardId: "card4" })} transition-transform duration-300 border-2 border-[#3557FF]  h-fit lg:h-[404px] rounded-[35px] p-4 relative w-full`}>
+            className={`${cardScaleClass({ cardId: "card4" })} transition-transform duration-300 border-2 border-[#3557FF]  h-fit lg:h-[404px] md:w-[444px] rounded-[35px] p-4 relative w-full`}>
             <SplineViewer scene={blueParticles} className="absolute top-0 left-0 w-full h-full -z-10" />
             <h2 className="text-[#3557FF] font-bold text-lg mb-4">Web Development</h2>
             <p>
