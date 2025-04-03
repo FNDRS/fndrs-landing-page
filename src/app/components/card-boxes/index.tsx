@@ -22,11 +22,11 @@ export const CardBoxes = () => {
   return (
     <div className="lg:h-[600px] xl:w-[1200px]">
       <div className="flex flex-col lg:flex-row h-full">
-        <div className="flex flex-col items-center w-full justify-center gap-4">
+        <div className="flex flex-col items-center w-full justify-center gap-6 p-2">
           <div
             onMouseEnter={() => setHoveredCard("card1")}
             onMouseLeave={() => setHoveredCard(null)}
-            className={`${cardScaleClass({ cardId: "card1" })} transition-transform duration-300 border-2 border-[#650208] h-fit max-w-[444px] lg:max-w-full xl:w-[850p] lg:h-[460px] rounded-[35px] p-[2rem] relative`}>
+            className={`${cardScaleClass({ cardId: "card1" })} transition-transform duration-300 border-2 border-[#650208] h-fit w-full max-w-[444px] lg:max-w-full xl:w-[850p] lg:h-[460px] rounded-[35px] p-[2rem] relative`}>
             <SplineViewer scene={redParticles} className="absolute top-0 left-0 w-full h-full -z-10" />
             <p className="max-w-[500px]">
               Smart solutions, fluid performance. We craft intuitive and scalable software that empowers businesses to grow and
@@ -37,7 +37,7 @@ export const CardBoxes = () => {
           <div
             onMouseEnter={() => setHoveredCard("card2")}
             onMouseLeave={() => setHoveredCard(null)}
-            className={`${cardScaleClass({ cardId: "card2" })} transition-transform duration-300 border-2 border-[#DF9512]  w-full h-fit md:w-[444px]  lg:h-[140px] rounded-[35px] p-4 relative`}>
+            className={`${cardScaleClass({ cardId: "card2" })} transition-transform duration-300 border-2 border-[#DF9512] w-full h-fit md:w-[444px] lg:w-full lg:h-[140px] rounded-[35px] p-4 relative `}>
             <SplineViewer scene={orangeParticles} className="absolute top-0 left-0 w-full h-full -z-10" />
             <h2 className="text-[#DF9512] font-bold text-xl">Branding & Identity</h2>
             <p>
