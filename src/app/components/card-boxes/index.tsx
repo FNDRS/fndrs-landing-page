@@ -53,7 +53,7 @@ export const CardBoxes = () => {
             className={`${cardScaleClass({ cardId: "card3" })} transition-transform duration-300 border-2 border-[#8A12DF] w-full h-[300px] rounded-4xl p-8 relative`}>
             <SplineViewer scene={purpleParticles} className="absolute top-0 left-0 w-full h-full -z-10" />
             <p className="text-lg">Storytelling with purpose. We create content that connects and drives impact.</p>
-            <h2 className="text-[#8A12DF] font-bold text-2xl mt-8">Content Strategy</h2>
+            <h2 className="text-[#8A12DF] font-bold text-3xl mt-8">Content Strategy</h2>
           </div>
           <div
             onMouseEnter={() => setHoveredCard("card4")}
@@ -63,8 +63,8 @@ export const CardBoxes = () => {
             <p>
               Elevating brands through high-performance websites. From sleek designs to robust functionality, we craft digital
               experiences that captivate and convert.
-              <h2 className="text-[#3557FF] font-bold text-2xl mt-8">Web Development</h2>
             </p>
+            <h2 className="text-[#3557FF] font-bold text-3xl mt-8">Web Development</h2>
           </div>
         </div>
       </div>
