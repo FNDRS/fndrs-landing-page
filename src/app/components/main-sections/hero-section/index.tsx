@@ -25,11 +25,10 @@ export const HeroSection = () => {
         </button>
         <a
           onClick={(e) => {
-            console.log("click")
             e.preventDefault()
             goToSection("about-us")
           }}>
-          <ArrowDown className="animate-bounce mt-8 hover:text-gray-400 text-white w-8 h-8 cursor-pointer transition-colors duration-300" />
+          <ArrowDown className="animate-bounce mt-8 text-white drop-shadow-[0_0_10px_white] w-8 h-8 cursor-pointer transition-colors duration-300 hover:text-gray-400" />
         </a>
       </div>
     </section>
