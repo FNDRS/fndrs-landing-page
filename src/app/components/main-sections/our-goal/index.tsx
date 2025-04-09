@@ -88,7 +88,6 @@ export const OurGoal = () => {
           className="flex flex-col flex-[3] md:flex-[2] items-center w-full"
           animate={{ opacity: 1, x: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}>
-          {/* Contenedor para limitar el ancho y centrar */}
           <div className="relative w-full max-w-3xl mx-auto">
             <ul ref={stepsRef} className="relative w-full flex items-center justify-center gap-x-12 font-bold py-8 px-4">
               <div className="absolute top-1/2 left-0  transform -translate-x-1/2 -translate-y-1/2 z-10 w-2 h-2 bg-white rounded-full" />
