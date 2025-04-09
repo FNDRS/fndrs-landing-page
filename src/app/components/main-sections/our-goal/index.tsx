@@ -1,7 +1,11 @@
 "use client"
 
+import { abstractTwist } from "@/app/utils/spline-scenes"
+
 import { motion, useInView, useScroll, useTransform } from "framer-motion"
 import React, { useEffect, useRef, useState } from "react"
+
+import { SplineViewer } from "../../spline-viewer"
 
 export const OurGoal = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null)
@@ -64,6 +68,8 @@ export const OurGoal = () => {
 
   return (
     <section className="h-screen relative" id="services" ref={sectionRef}>
+      <SplineViewer scene={abstractTwist} className="absolute inset-0 -z-10" />
+
       <div className="flex flex-col h-full items-center">
         <motion.div
           className="w-[350px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] flex justify-center items-center flex-1"
