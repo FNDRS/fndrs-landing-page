@@ -60,7 +60,7 @@ export const CardBoxes = () => {
             className={`${cardScaleClass({ cardId: "card3" })} transition-transform duration-300 border-2 border-[#8A12DF] w-full rounded-4xl p-8 relative h-full`}>
             <SplineViewer scene={purpleParticles} className="absolute top-0 left-0 w-full h-full -z-10" />
             <p className="text-lg w-96">
-              Our development team specializes in bringing designs to live with precision and performance.
+              Our development team specializes in bringing designs to life with precision and performance.
             </p>
             <h2 className="text-[#8A12DF] font-bold text-3xl mt-4">Website Development</h2>
           </div>
