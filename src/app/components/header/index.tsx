@@ -17,7 +17,7 @@ export const Header: React.FC<HeaderProps> = ({ goToSection = () => {} }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all text-lg ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all px-20 text-lg ${
         scrolled ? "bg-black/70 backdrop-blur-md shadow-md" : "bg-black"
       }`}
       id="header">

@@ -30,17 +30,17 @@ export const AboutUs = () => {
       <div className="xl:w-[1200px] flex flex-col xl:flex-row items-center justify-center xl:justify-between xl:gap-24">
         <div className="lg:w[800px] w-[350px] md:w-[600px] xl:w-[800px] flex flex-col items-center xl:items-start text-center xl:text-left order-1 xl:order-1 justify-center">
           <motion.div ref={titleRef} style={{ opacity: titleOpacity, y: titleY }}>
-            <h3 className="self-start font-bold text-3xl sm:text-4xl md:text-3xl">who we are?</h3>
-            <h2 className="self-start font-bold text-4xl sm:text-5xl md:text-7xl">Revolutionaries</h2>
+            <h3 className="self-start font-bold text-4xl sm:text-4xl md:text-5xl mb-2">Who we are?</h3>
+            <h2 className="self-start font-bold text-4xl sm:text-5xl md:text-8xl mb-4">Revolutionaries</h2>
           </motion.div>
 
           <motion.p
-            className="mt-4 text-lg sm:text-lg leading-8 text-justify"
+            className="my-4 text-xl sm:text-xl leading-8 text-[#a2a2a2]"
             ref={paragraphRef}
             style={{ opacity: paragraphOpacity, y: paragraphY }}>
-            We are architects of change. Driven by vision and precision, we blend technology with purpose to craft solutions that
-            leave a lasting mark. Our essence lies in pushing boundaries, redefining norms, and transforming potential into
-            progress.
+            <strong className="font-bold text-white">FNDRS </strong>
+            is a 360 consulting agency. The focus of our work is help clients to found and build their future based on technology,
+            mitigating risk and drive efficiency through people, process and technology.
           </motion.p>
 
           <motion.a
