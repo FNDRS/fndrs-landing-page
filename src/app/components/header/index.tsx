@@ -15,9 +15,9 @@ export const Header: React.FC<HeaderProps> = ({ goToSection = () => {} }) => {
 
   return (
     <header
-      className={"fixed top-0 left-0 w-full z-50 transition-all px-20 text-lg bg-black/70 backdrop-blur-md shadow-md"}
+      className={"fixed top-0 left-0 w-full z-50 transition-all px-8 md:px-20 text-lg bg-black/70 backdrop-blur-md shadow-md"}
       id="header">
-      <div className="max-w-7xl mx-auto py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto py-4 flex justify-center md:justify-between items-center">
         <div className="flex items-center">
           <button className="sm:hidden focus:outline-none mr-4" onClick={() => setIsMenuOpen(true)}>
             <Menu className="w-6 h-6" />
@@ -25,7 +25,7 @@ export const Header: React.FC<HeaderProps> = ({ goToSection = () => {} }) => {
 
           <div className="flex items-center">
             <Image src="/fndrs-logo.webp" alt="FNDRS" width={100} height={200} className="h-6 w-auto" />
-            <span className="ml-2 pl-2 text-[12px] md:text-lg border-l-2 border-gray-100/80 text-gray-100/80">
+            <span className="ml-2 pl-2 text-[10px] md:text-sm border-l-2 border-gray-100/80 text-gray-100/80">
               Software Agency
             </span>
           </div>

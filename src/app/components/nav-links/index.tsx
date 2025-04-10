@@ -24,7 +24,7 @@ export const NavLinks: React.FC<NavLinksProps> = ({ goToSection = () => {} }) =>
       {navLinks.map(({ label, section, withIcon }, index) => (
         <li
           key={index}
-          className="flex flex-row gap-1 items-center justify-center hover:text-gray-400 cursor-pointer transition-colors duration-300">
+          className="flex flex-row gap-1 items-center justify-center hover:text-gray-400 cursor-pointer transition-colors duration-300 text-sm">
           <a onClick={() => goToSection(section)}>{label}</a>
           {withIcon && <ArrowUpRight className="pt-[2px] transition-opacity duration-300 hover:opacity-80" />}
         </li>
