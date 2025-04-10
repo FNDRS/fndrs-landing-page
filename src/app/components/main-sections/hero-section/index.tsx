@@ -14,7 +14,7 @@ export const HeroSection = () => {
 
       <div className="relative flex flex-col text-center items-center gap-2 xl:w-[1200px]">
         <h2 className="text-2xl">Make things with</h2>
-        <h1 className="uppercase text-7xl font-extrabold">excellence</h1>
+        <h1 className="uppercase text-6xl md:text-7xl font-extrabold">Excellence</h1>
         <button
           onClick={(e) => {
             e.preventDefault()
