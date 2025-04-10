@@ -5,6 +5,7 @@ export const abstractTwistVertical = "https://prod.spline.design/bZGrWfCeOOc3UpP
 export const cardsAnimation = "https://prod.spline.design/RVxppLzCdgCIh8KM/scene.splinecode"
 export const keyboardAnimation = "https://prod.spline.design/4jaKZNiJ17RGatnN/scene.splinecode"
 export const liquidAnimation = "https://prod.spline.design/kdv0g7xL3HtW-efo/scene.splinecode"
+export const nirvanaAnimation = "https://prod.spline.design/QHeA2j7B9uBrGcRz/scene.splinecode"
 
 export const redParticles = "https://prod.spline.design/rydpw0UO-tR11lMV/scene.splinecode"
 export const blueParticles = "https://prod.spline.design/4dDxD01GdCaZ0Nbz/scene.splinecode"
