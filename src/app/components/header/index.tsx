@@ -1,35 +1,46 @@
-import { NavLinks } from "@/app/components/nav-links"
-import { SideMenu } from "@/app/components/side-menu"
+import useScrollPosition from "@/app/hooks/use-scroll-position"
 
 import { Menu } from "lucide-react"
 import Image from "next/image"
 import React, { useState } from "react"
 
+import { NavLinks } from "../nav-links"
+import { SideMenu } from "../side-menu"
+
 interface HeaderProps {
   goToSection?: (sectionId: string) => void
 }
 
-export const Header = ({ goToSection = () => {} }: HeaderProps) => {
+export const Header: React.FC<HeaderProps> = ({ goToSection = () => {} }) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+  const scrolled = useScrollPosition(10)
+
   return (
-    <header className="bg-black text-white" id="header">
-      <div className="px-10 py-6 flex justify-center sm:justify-between items-center">
-        <div className="flex-none self-start">
-          <button className="self-start sm:hidden focus:outline-none" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all px-20 text-lg ${
+        scrolled ? "bg-black/70 backdrop-blur-md shadow-md" : "bg-black"
+      }`}
+      id="header">
+      <div className="max-w-7xl mx-auto py-4 flex justify-between items-center">
+        <div className="flex items-center">
+          <button className="sm:hidden focus:outline-none mr-4" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <Menu className="w-6 h-6" />
           </button>
+
+          <div className="flex items-center">
+            <Image src="/fndrs-logo.webp" alt="FNDRS" width={100} height={200} className="h-6 w-auto" />
+            <span className="ml-2 pl-2 text-lg border-l-2 border-gray-100/80 text-gray-100/80">Software Agency</span>
+          </div>
         </div>
 
-        <div className="flex-1 flex justify-center sm:justify-start">
-          <Image src="/fndrs-logo.webp" alt="FNDRS" width={100} height={100} />
-        </div>
-
-        <div className="hidden sm:block">
+        <nav className="hidden sm:block">
           <NavLinks goToSection={goToSection} />
-        </div>
+        </nav>
       </div>
 
       {isMenuOpen && <SideMenu setIsMenuOpen={setIsMenuOpen} goToSection={goToSection} />}
     </header>
   )
 }
+
+export default Header

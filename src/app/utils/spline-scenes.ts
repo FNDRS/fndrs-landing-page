@@ -1,6 +1,7 @@
 export const whiteParticles = "https://prod.spline.design/Ty7eDqDQd4774jXD/scene.splinecode"
 export const sunAndMountains = "https://prod.spline.design/lewYIb3uYgH-SpcE/scene.splinecode"
 export const abstractTwist = "https://prod.spline.design/QIWZREJyZINgRFva/scene.splinecode"
+export const abstractTwistVertical = "https://prod.spline.design/bZGrWfCeOOc3UpPk/scene.splinecode"
 export const cardsAnimation = "https://prod.spline.design/RVxppLzCdgCIh8KM/scene.splinecode"
 export const keyboardAnimation = "https://prod.spline.design/4jaKZNiJ17RGatnN/scene.splinecode"
 export const liquidAnimation = "https://prod.spline.design/kdv0g7xL3HtW-efo/scene.splinecode"

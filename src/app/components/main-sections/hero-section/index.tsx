@@ -1,7 +1,7 @@
-import SharedIcon from "@/app/components/shared"
 import { SplineViewer } from "@/app/components/spline-viewer"
 import { liquidAnimation } from "@/app/utils/spline-scenes"
 
+import { ArrowDown } from "lucide-react"
 import React from "react"
 
 export const HeroSection = () => {
@@ -9,12 +9,12 @@ export const HeroSection = () => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
   }
   return (
-    <section className="flex flex-row items-center justify-center h-screen -top-20 sm:-top-8 " id="section-1">
+    <section className="flex flex-row items-center justify-center h-screen -top-20 sm:-top-8 " id="home">
       <SplineViewer scene={liquidAnimation} className="absolute sm:h-fit -z-10" />
 
-      <div className="relative flex flex-col text-center items-center gap-8 xl:w-[1200px]">
-        <h2 className="text-xl">Make things with</h2>
-        <h1 className="uppercase text-6xl font-extrabold">excellence</h1>
+      <div className="relative flex flex-col text-center items-center gap-2 xl:w-[1200px]">
+        <h2 className="text-2xl">Make things with</h2>
+        <h1 className="uppercase text-6xl md:text-7xl font-extrabold">Excellence</h1>
         <button
           onClick={(e) => {
             e.preventDefault()
@@ -25,11 +25,10 @@ export const HeroSection = () => {
         </button>
         <a
           onClick={(e) => {
-            console.log("click")
             e.preventDefault()
             goToSection("about-us")
           }}>
-          <SharedIcon kind="arrowDown" className="relative top-20 sm:top-0 cursor-pointer" />
+          <ArrowDown className="animate-bounce mt-8 text-white drop-shadow-[0_0_10px_white] w-8 h-8 cursor-pointer transition-colors duration-300 hover:text-gray-400" />
         </a>
       </div>
     </section>
