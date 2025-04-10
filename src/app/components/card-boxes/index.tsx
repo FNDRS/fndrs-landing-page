@@ -16,7 +16,7 @@ const Card = ({ cardId, rounded, border, title, textColor, description, setHover
   <div
     onMouseEnter={() => setHoveredCard(cardId)}
     onMouseLeave={() => setHoveredCard(null)}
-    className={`${cardScaleClass({ cardId })} transition-transform duration-300 border-2 ${border} w-full ${rounded} p-8 relative h-full`}>
+    className={`${cardScaleClass({ cardId })} transition-transform duration-300 border-2 ${border} w-full ${rounded} p-8 `}>
     <p className="text-lg w-96">{description}</p>
     <h2 className="font-bold text-3xl mt-4" style={{ color: textColor }}>
       {title}
@@ -72,7 +72,7 @@ export const CardBoxes = () => {
   ]
 
   return (
-    <div className="lg:h-[500px] md:w-[900px]">
+    <div className=" md:w-[900px]">
       <div className="flex flex-col md:flex-row h-full w-[900px] mx-auto">
         <div className="flex flex-col items-center justify-center gap-6 p-2">
           {leftCards.map((card) => (
