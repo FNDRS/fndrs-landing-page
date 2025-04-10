@@ -15,7 +15,7 @@ export default function ContactUs() {
             </p>
           </div>
         </div>
-        <div className="min-w-[300px] max-w-[800px]">
+        <div className="min-w-[400px] max-w-[800px] px-12">
           <ContactUsForm />
         </div>
       </div>
