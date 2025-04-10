@@ -66,7 +66,7 @@ export default function ContactUsForm() {
 
       <TextAreaField label={"Tell us about your idea"} register={register} errors={errors} id={"message"} required />
 
-      <button className="text-black font-bold bg-white w-fit text-lg px-7 py-1 border rounded-xl" disabled={isLoading}>
+      <button className="text-black font-bold bg-white w-fit text-lg px-12 py-1 border rounded-xl" disabled={isLoading}>
         Send
       </button>
     </form>
