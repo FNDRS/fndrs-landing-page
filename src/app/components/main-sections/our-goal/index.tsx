@@ -67,10 +67,11 @@ export const OurGoal = () => {
   }, [scrollYProgress])
 
   return (
-    <section className="h-screen relative" id="services" ref={sectionRef}>
+    <div className="h-screen relative my-20" id="services" ref={sectionRef}>
       <SplineViewer scene={abstractTwist} className="absolute inset-0 -z-10" />
 
       <div className="flex flex-col h-full items-center">
+        {/* Sección "Our goal" */}
         <motion.div
           className="w-[350px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] flex justify-center items-center flex-1"
           style={{ opacity: goalOpacity, y: goalY }}
@@ -81,6 +82,7 @@ export const OurGoal = () => {
           </h3>
         </motion.div>
 
+        {/* Sección "How we do it? Together" */}
         <motion.div
           className="w-[350px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] flex flex-col flex-1"
           style={{ opacity: howWeDoItOpacity, y: howWeDoItY }}
@@ -90,18 +92,43 @@ export const OurGoal = () => {
           <h2 className="font-bold text-5xl sm:text-6xl md:text-8xl">Together</h2>
         </motion.div>
 
+        {/* Sección Steps / Timeline */}
         <motion.div
           className="flex flex-col flex-[3] md:flex-[2] items-center w-full"
           animate={{ opacity: 1, x: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}>
           <div className="relative w-full max-w-3xl mx-auto">
-            <ul ref={stepsRef} className="relative w-full flex items-center justify-center gap-x-12 font-bold py-8 px-4">
-              <div className="absolute top-1/2 left-0  transform -translate-x-1/2 -translate-y-1/2 z-10 w-2 h-2 bg-white rounded-full" />
+            {/* Contenedor UL que cambia de columna (mobile) a fila (desktop) */}
+            <ul
+              ref={stepsRef}
+              className="
+                relative
+                flex flex-col items-center gap-16  /* En mobile, columna y espacio vertical */
+                w-full py-8 px-4
+                md:flex-row md:justify-center md:items-center md:gap-12  /* En desktop, fila */
+              ">
+              {/* Línea:
+                  - Mobile: vertical (h-full, centrada horizontalmente con left-[50%]).
+                  - Desktop: horizontal (w-full, centrada verticalmente con top-[50%]). 
+              */}
+              <div
+                className="
+                  absolute transform -z-10
+                  left-1/2 top-0 w-0.5 h-full bg-white
+                  md:left-0 md:top-1/2 md:w-full md:h-0.5 md:-translate-y-1/2
+                "
+              />
 
-              <div className="absolute top-1/2 left-0 w-full h-0.5 bg-white -z-10 -translate-y-1/2" />
-
+              {/* Flecha:
+                  - Mobile: en la parte inferior, apuntando hacia abajo (rotate-90).
+                  - Desktop: a la derecha, centrada verticalmente, apuntando a la derecha (rotate-0).
+               */}
               <svg
-                className="absolute top-1/2 right-0 -translate-y-1/2 h-6 w-6 text-white -mr-3"
+                className="
+                  absolute transform h-6 w-6 text-white
+                  -bottom-4 left-1/2 -translate-x-[11px] rotate-90
+                  md:top-1/2 md:bottom-auto md:left-[100%] md:-translate-y-1/2 md:rotate-0
+                "
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -117,20 +144,38 @@ export const OurGoal = () => {
                   variants={listItemVariants}
                   initial="hidden"
                   animate={isStepsInView ? "visible" : "hidden"}
-                  className="relative flex flex-col items-center text-center">
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 w-5 h-5 bg-white rounded-full" />
+                  className="relative flex flex-col items-center text-center w-full md:w-auto">
+                  {/* Bullet:
+                      - Se ubica al centro de cada <li> para que quede en la línea
+                        (que está centrada) tanto en mobile como en desktop.
+                  */}
+                  <div
+                    className="
+                      absolute left-1/2 top-0
+                      md:top-1/2 md:-translate-y-1/2
+                      transform -translate-x-1/2 z-10 w-5 h-5 bg-white rounded-full
+                    "
+                  />
 
-                  <div className="relative mt-12">
+                  {/* Título del paso */}
+                  <div className="mt-12 md:mt-16">
                     <span className="text-[0.85rem] md:text-[1rem] lg:text-xl leading-5 cursor-pointer">{step.title}</span>
 
+                    {/* Descripción emergente si está abierto */}
                     {openIndex === index && (
                       <motion.div
                         initial={{ opacity: 0, y: 5, scale: 0.8 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 5, scale: 0.8 }}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="absolute left-1/2 top-full transform -translate-x-1/2 mt-3 w-[220px] sm:w-[280px] p-4 bg-white rounded-md shadow-lg">
-                        <div className="absolute w-4 h-4 bg-white transform rotate-45 -top-2 left-1/2 -translate-x-1/2" />
+                        className="relative mt-3 w-[220px] sm:w-[280px] p-4 bg-white rounded-md shadow-lg mx-auto">
+                        {/* Flecha / Triángulo del popup */}
+                        <div
+                          className="
+                            absolute w-4 h-4 bg-white transform rotate-45
+                            -top-2 left-1/2 -translate-x-1/2
+                          "
+                        />
                         <h4 className="font-bold text-lg mb-2 text-zinc-600">{step.title}</h4>
                         <p className="text-sm text-gray-400 font-semibold">{step.description}</p>
                       </motion.div>
@@ -142,6 +187,6 @@ export const OurGoal = () => {
           </div>
         </motion.div>
       </div>
-    </section>
+    </div>
   )
 }
