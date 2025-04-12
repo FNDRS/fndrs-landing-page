@@ -8,6 +8,7 @@ import { AboutUs } from "./components/main-sections/about-us"
 import ContactUs from "./components/main-sections/contact-us"
 import { HeroSection } from "./components/main-sections/hero-section"
 import { OurGoal } from "./components/main-sections/our-goal"
+import { WhatWeDo } from "./components/main-sections/what-we-do"
 import { textVariants } from "./utils/text-animation"
 
 export default function Home() {
@@ -36,7 +37,7 @@ export default function Home() {
         <AboutUs />
       </motion.section>
 
-      {/*    <motion.section
+      <motion.section
         initial="hidden"
         whileInView="visible"
         variants={textVariants}
@@ -44,7 +45,7 @@ export default function Home() {
         viewport={{ once: false, amount: 0.5 }}>
         <WhatWeDo />
       </motion.section>
- */}
+
       <motion.section
         initial="hidden"
         whileInView="visible"
