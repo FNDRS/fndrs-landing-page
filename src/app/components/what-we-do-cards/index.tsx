@@ -23,7 +23,7 @@ const Card = ({ splineAnimation, cardId, baseColor, title, description, setHover
     style={{ borderColor: baseColor }}>
     <SplineViewer scene={splineAnimation} className="absolute top-0 left-0 w-full h-full rounded-4xl -z-50" />
     <div className="h-full w-full p-8">
-      <p className="text-lg w-96">{description}</p>
+      <p className="text-lg md:w-96">{description}</p>
       <h2 className="font-bold text-3xl mt-4" style={{ color: baseColor }}>
         {title}
       </h2>
@@ -75,9 +75,9 @@ export const WhatWeDoCards = () => {
   ]
 
   return (
-    <div className="md:w-[900px] h-full">
-      <div className="flex flex-col md:flex-row w-[900px] mx-auto h-full">
-        <div className="flex flex-col items-center justify-center gap-6 p-2 h-full">
+    <div className="md:w-[900px] h-full p-2 w-full box-border">
+      <div className="flex flex-col md:flex-row md:w-[900px] mx-auto h-full">
+        <div className="flex flex-col items-center justify-center gap-6 p-2 h-full ">
           {leftCards.map((card) => (
             <Card
               key={card.cardId}

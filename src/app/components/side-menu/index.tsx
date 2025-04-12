@@ -30,18 +30,18 @@ export const SideMenu: React.FC<SideMenuProps> = ({ setIsMenuOpen, goToSection }
         </div>
 
         <nav className="flex flex-col items-center gap-6 text-lg">
-          <button onClick={() => goToSection("home")} className="hover:text-orange-500 transition">
+          <button onClick={() => goToSection("home")} className="hover:text-purple-500 transition">
             Home
           </button>
-          <button onClick={() => goToSection("services")} className="hover:text-orange-500 transition">
+          <button onClick={() => goToSection("services")} className="hover:text-purple-500 transition">
             Services
           </button>
-          <button onClick={() => goToSection("about")} className="hover:text-orange-500 transition">
+          <button onClick={() => goToSection("about")} className="hover:text-purple-500 transition">
             About Us
           </button>
           <button
             onClick={() => goToSection("contact")}
-            className="hover:text-orange-500 transition flex flex-row gap-1 justify-center items-center">
+            className="hover:text-purple-500 transition flex flex-row gap-1 justify-center items-center">
             Contact
             <ArrowUpRight />
           </button>
