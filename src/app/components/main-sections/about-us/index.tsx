@@ -22,7 +22,7 @@ export const AboutUs = () => {
   const splineY = useTransform(scrollYProgress, [0.4, 0.5], [90, 0])
 
   return (
-    <section className="h-screen flex justify-center" id="about-us" ref={sectionRef}>
+    <section className="h-screen flex justify-center" id="about" ref={sectionRef}>
       <div className="xl:w-[1200px] flex flex-col xl:flex-row items-center justify-center xl:justify-between xl:gap-24">
         <div className="lg:w-[700px] w-[350px] md:w-[700px] xl:w-[800px] flex flex-col items-center xl:items-start text-center xl:text-left order-1 xl:order-1 justify-center">
           <motion.div style={{ opacity: titleOpacity, y: titleY }}>

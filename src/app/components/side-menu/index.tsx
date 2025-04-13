@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import { ArrowUpRight, X } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import React from "react"
 
 interface SideMenuProps {
@@ -50,12 +51,20 @@ export const SideMenu: React.FC<SideMenuProps> = ({ setIsMenuOpen, goToSection }
         <div className="mt-10 border-t border-white/20 pt-6 text-sm text-gray-400">
           <p className="mb-2">Let&apos;s build something great.</p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-white">
+            <Link
+              href="https://www.instagram.com/the.fndrs/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white">
               Instagram
-            </a>
-            <a href="#" className="hover:text-white">
+            </Link>
+            <Link
+              href="https://www.linkedin.com/company/the-fndrs/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white">
               LinkedIn
-            </a>
+            </Link>
           </div>
         </div>
       </motion.div>
