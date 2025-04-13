@@ -14,8 +14,8 @@ interface LinkItem {
 const navLinks: LinkItem[] = [
   { label: "Home", section: "home" },
   { label: "Services", section: "services" },
-  { label: "About us", section: "about-us" },
-  { label: "Get in contact", section: "contact-us", withIcon: true }
+  { label: "About us", section: "about" },
+  { label: "Get in contact", section: "contact", withIcon: true }
 ]
 
 export const NavLinks: React.FC<NavLinksProps> = ({ goToSection = () => {} }) => {

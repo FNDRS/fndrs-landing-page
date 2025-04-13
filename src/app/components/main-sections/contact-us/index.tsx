@@ -4,7 +4,7 @@ import { sunAndMountains } from "@/app/utils/spline-scenes"
 
 export default function ContactUs() {
   return (
-    <section className="h-screen flex justify-center" id="contact-us">
+    <section className="h-screen flex justify-center" id="contact">
       <SplineViewer scene={sunAndMountains} className="absolute -z-10" />
       <div className="flex md:flex-row sm:justify-between items-center w-full h-full flex-col sm:py-8 md:w-[900px]">
         <div className="flex flex-col sm:w-1/2 md:border-r-2 border-[#bcbcbca9] justify-center items-center sm:h-3/4 sm:items-start">
