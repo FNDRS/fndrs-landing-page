@@ -13,7 +13,7 @@ export const SideMenuList: React.FC<MenuListProps> = ({ setIsMenuOpen, goToSecti
         href="#get-in-contact"
         onClick={() => {
           setIsMenuOpen(false)
-          goToSection("contact-us")
+          goToSection("contact")
         }}>
         Get in contact
       </SideMenuItem>
@@ -26,10 +26,10 @@ export const SideMenuList: React.FC<MenuListProps> = ({ setIsMenuOpen, goToSecti
         Services
       </SideMenuItem>
       <SideMenuItem
-        href="#about-us"
+        href="#about"
         onClick={() => {
           setIsMenuOpen(false)
-          goToSection("about-us")
+          goToSection("about")
         }}>
         About us
       </SideMenuItem>

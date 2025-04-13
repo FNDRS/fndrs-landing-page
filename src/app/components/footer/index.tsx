@@ -37,8 +37,8 @@ const Navigation: React.FC<NavigationProps> = ({ goToSection }) => {
         </Link>
       </li>
       <li>
-        <Link href="#about-us" legacyBehavior>
-          <a className="hover:cursor-pointer" onClick={() => goToSection("about-us")}>
+        <Link href="#about" legacyBehavior>
+          <a className="hover:cursor-pointer" onClick={() => goToSection("about")}>
             About Us
           </a>
         </Link>
