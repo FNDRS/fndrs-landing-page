@@ -18,7 +18,7 @@ export const HeroSection = () => {
         <button
           onClick={(e) => {
             e.preventDefault()
-            goToSection("contact-us")
+            goToSection("contact")
           }}
           className="bg-white hover:bg-gray-200 text-black py-2 px-12 rounded-xl mt-4 w-fit">
           Let&apos;s Create
@@ -26,7 +26,7 @@ export const HeroSection = () => {
         <a
           onClick={(e) => {
             e.preventDefault()
-            goToSection("about-us")
+            goToSection("about")
           }}>
           <ArrowDown className="animate-bounce mt-8 text-white drop-shadow-[0_0_10px_white] w-8 h-8 cursor-pointer transition-colors duration-300 hover:text-gray-400" />
         </a>
