@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({ goToSection = () => {} }) => {
       className={"fixed top-0 left-0 w-full z-50 transition-all px-8 md:px-20 text-lg bg-black/70 backdrop-blur-md shadow-md"}
       id="header">
       <div className="max-w-7xl mx-auto py-4 flex justify-center md:justify-between items-center">
-        <div className="flex items-center">
+        <div className="flex items-start">
           <button className="sm:hidden focus:outline-none mr-4" onClick={() => setIsMenuOpen(true)}>
             <Menu className="w-6 h-6" />
           </button>

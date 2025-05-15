@@ -8,11 +8,15 @@ export const HeroSection = () => {
   const goToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
   }
-  return (
-    <section className="flex flex-row items-center justify-center h-screen -top-20 sm:-top-8" id="home">
-      <SplineViewer scene={nirvanaAnimation} className="absolute sm:h-fit -z-10" />
 
-      <div className="  flex flex-col text-center items-center gap-2 xl:w-[1200px] overflow-hidden">
+  return (
+    <section className="relative flex flex-row items-center justify-center h-screen" id="home">
+      <SplineViewer scene={nirvanaAnimation} className="absolute inset-0 h-full w-full -z-10" />
+
+      {/* Gradiente o Glass Effect en el fondo inferior */}
+      <div className="absolute bottom-0 left-0 w-full h-32  to-transparent backdrop-blur-sm z-0" />
+
+      <div className="relative flex flex-col text-center items-center gap-2 xl:w-[1200px] overflow-hidden">
         <h2 className="text-2xl">Make things with</h2>
         <h1 className="uppercase text-6xl md:text-7xl font-extrabold">Excellence</h1>
         <button
